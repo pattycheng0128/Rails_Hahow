@@ -10,6 +10,7 @@ class OrdersController < ApplicationController
     @order = @course.orders.build(clean_params)
 
     if @order.save
+      # 刷卡
       redirect_to root_path, notice: '課程購買成功'
     else
       #render
